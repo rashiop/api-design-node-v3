@@ -1,5 +1,6 @@
-import controllers from '../item.controllers'
-import { isFunction } from 'lodash'
+import { isFunction } from 'lodash';
+
+import controllers from '../item.controllers';
 
 describe('item controllers', () => {
   test('has crud controllers', () => {
@@ -9,10 +10,10 @@ describe('item controllers', () => {
       'createOne',
       'removeOne',
       'updateOne'
-    ]
+    ];
 
     crudMethods.forEach(name =>
       expect(isFunction(controllers[name])).toBe(true)
-    )
-  })
-})
+    );
+  });
+});

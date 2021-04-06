@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
 const listSchema = new mongoose.Schema(
   {
@@ -16,8 +16,8 @@ const listSchema = new mongoose.Schema(
     }
   },
   { timestamps: true }
-)
+);
 
-listSchema.index({ user: 1, name: 1 }, { unique: true })
+listSchema.index({ user: 1, name: 1 }, { unique: true });
 
-export const List = mongoose.model('list', listSchema)
+export const List = mongoose.model('list', listSchema);

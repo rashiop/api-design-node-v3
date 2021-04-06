@@ -1,6 +1,7 @@
+const dbUrl =
+  'mongodb+srv://rashiop:KjcY9jFqDVnYQtx8@cluster0.0ohiw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+
 export const config = {
-  secrets: {
-    jwt: 'learneverything'
-  },
-  dbUrl: 'mongodb://localhost:27017/api-design-test'
-}
+  secrets: { jwt: 'learneverything' },
+  dbUrl
+};
