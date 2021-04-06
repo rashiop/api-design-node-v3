@@ -1,9 +1,10 @@
-import { Router } from 'express'
-import { me, updateMe } from './user.controllers'
+import { Router } from 'express';
 
-const router = Router()
+import { me, updateMe } from './user.controllers';
 
-router.get('/', me)
-router.put('/', updateMe)
+const router = Router();
 
-export default router
+router.get('/', me);
+router.put('/', updateMe);
+
+export default router;

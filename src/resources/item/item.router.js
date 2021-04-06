@@ -1,19 +1,19 @@
-import { Router } from 'express'
-import controllers from './item.controllers'
+import { Router } from 'express';
 
-const router = Router()
+import controllers from './item.controllers';
 
-// /api/item
+const router = Router();
+
 router
   .route('/')
   .get(controllers.getMany)
-  .post(controllers.createOne)
+  .post(controllers.createOne);
 
 // /api/item/:id
 router
   .route('/:id')
   .get(controllers.getOne)
   .put(controllers.updateOne)
-  .delete(controllers.removeOne)
+  .delete(controllers.removeOne);
 
-export default router
+export default router;
