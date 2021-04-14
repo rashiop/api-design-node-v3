@@ -11,7 +11,7 @@ const models = { User, List, Item };
 const url =
   process.env.MONGODB_URI ||
   process.env.DB_URL ||
-  'mongodb+srv://rashiop:KjcY9jFqDVnYQtx8@cluster0.0ohiw.mongodb.net/myFirstDatabase';
+  'mongodb+srv://process.env.DB_USERNAME:process.env.DB_PASSWORD@cluster0.0ohiw.mongodb.net/process.env.DB_NAME';
 
 global.newId = () => {
   return mongoose.Types.ObjectId();
@@ -35,7 +35,7 @@ beforeEach(async done => {
     try {
       await mongoose.connect(
         url + db + '?retryWrites=true&w=majority',
-        { useNewUrlParser: true, autoIndex: true, useUnifiedTopology: true }
+        { useNewUrlParser: true, useUnifiedTopology: true }
       );
       await clearDB();
       await Promise.all(Object.keys(models).map(name => models[name].init()));
